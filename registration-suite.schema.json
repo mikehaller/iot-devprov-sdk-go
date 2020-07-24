@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "deviceId": {
+      "type": "string",
+      "title": "ID of device"
+    },
+    "enabled": {
+      "type": "boolean",
+      "title": "Device Enabled",
+      "default": true
+    },
+    "via": {
+      "type": "string",
+      "description": "Gateway Device that is allowed to send messages on behalf of the device."
+    },
+    "defaults": {
+      "description": "Default values to be used by protocol adapters for augmenting messages from devices with missing information like a content-type. It is up to the discretion of a protocol adapter if and how to use the given default values when processing messages published by the device. It is possible to add custom properties, these will be added to each message as application properties.",
+      "type": "object",
+      "properties": {
+        "content-type": {
+          "type": "string",
+          "description": "The content-type to use for northbound messages published by this device. This can be useful for protocols like MQTT where the content-type cannot be set directly in a message. The content-type is specified in RFC-2046. Example value: 'application/json'"
+        },
+        "content-encoding": {
+          "type": "string",
+          "description": "The content-encoding can be set optionally in addition to the content-type. It defines what additional content encodings have to be applied to the message content to receive the media-type referenced by the content-type. The main usage of the content-encoding is to allow compression without losing information about the compressed data type. The content-encoding is specified in section 3.5 of RFC 2616."
+        },
+        "ttl": {
+          "type": "integer",
+          "description": "The time-to-live (in seconds) to use for events published by this device. This value is limited by the booked service plan's event storage time."
+        }
+      }
+    }
+  }
+}
