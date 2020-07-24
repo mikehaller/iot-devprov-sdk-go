@@ -745,6 +745,7 @@ components:
       description: Use OAuth2 clients from https://accounts.bosch-iot-suite.com/oauth2-clients/
       flows:
         clientCredentials:
+          authorizationUrl: https://access.bosch-iot-suit.com/v2/token
           scopes: {}
           tokenUrl: https://access.bosch-iot-suit.com/v2/token
       type: oauth2

@@ -169,6 +169,7 @@ components:
       flows:
         clientCredentials:
           tokenUrl: 'https://access.bosch-iot-suit.com/v2/token'
+          authorizationUrl: "https://access.bosch-iot-suit.com/v2/token"
           scopes: {}
 
   responses:

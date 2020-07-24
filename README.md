@@ -96,7 +96,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: application
-- **Authorization URL**: 
+- **Authorization URL**: https://access.bosch-iot-suit.com/v2/token
 - **Scopes**: N/A
 
 Example
